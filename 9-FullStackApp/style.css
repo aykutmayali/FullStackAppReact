@@ -13,12 +13,24 @@ body {
 
 .header {
   margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 2px;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .fact-form {
   background-color: #78716c;
   margin-bottom: 40px;
   padding: 16px 40px;
+  text-align: center;
 }
 
 .main {
@@ -26,7 +38,8 @@ body {
 }
 
 .emojis {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-left: auto;
 }
 
 h1 {
@@ -34,6 +47,9 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   font-family: "Coiny", sans-serif;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  line-height: 1;
 }
 
 .fact {
@@ -43,14 +59,30 @@ h1 {
   margin-bottom: 16px;
   padding: 16px 30px;
   border: 4px solid red;
+  letter-spacing: -1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .tag {
   text-transform: uppercase;
   font-size: 14px;
   font-family: "Coiny", sans-serif;
+  padding: 3px 10px;
 }
 
 ul {
   list-style: none;
+}
+
+.developer {
+  font-size: medium;
+  color: orangered;
+  text-align: center;
+  font-family: "Coiny", sans-serif;
+  padding: 10%;
+  margin: 2px;
 }
