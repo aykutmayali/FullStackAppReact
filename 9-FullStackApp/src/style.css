@@ -17,7 +17,7 @@ body {
 }
 
 /* LAYOUTS */
-.container {
+#roots {
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -92,7 +92,7 @@ h1 {
   line-height: 1;
 }
 
-.fact {
+.facts {
   font-size: 20px;
   line-height: 1.4;
   background-color: #575553;
