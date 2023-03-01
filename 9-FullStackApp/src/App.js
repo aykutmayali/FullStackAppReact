@@ -63,6 +63,7 @@ function Counter() {
 }
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
   const appTitle = "Today I have learned";
 
   return (
@@ -74,11 +75,18 @@ function App() {
           <h1>{appTitle}</h1>
         </div>
 
-        <button className="btn btn-large btn-open">Share a fact</button>
+        <button
+          className="btn btn-large btn-open"
+          //onClick={() => (showForm ? setShowForm(false) : setShowForm(true))}
+          onClick={() => setShowForm((show) => !show)}
+        >
+          Share a fact
+        </button>
       </header>
 
-      <Counter />
-      <NewFactForm />
+      {/* <Counter /> */}
+
+      {showForm ? <NewFactForm /> : null}
 
       <main className="main">
         <CategoryFilter />
