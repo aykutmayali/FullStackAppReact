@@ -282,6 +282,8 @@ function FactList({ facts, setFacts }) {
 function Fact({ fact, setFacts }) {
   //const { factObj } = props; // const factObj = props.factObj;
   const [isUpdating, setIsUpdating] = useState(false);
+  const isDisputed =
+    fact.votesInteresting + fact.votesMindblowing < fact.votesFalse;
 
   async function handleVote(columnName) {
     setIsUpdating(true);
@@ -302,6 +304,9 @@ function Fact({ fact, setFacts }) {
   return (
     <li className="facts">
       <p>
+        {isDisputed ? (
+          <span className="disputed">[:red_circle: Disputed]</span>
+        ) : null}
         {fact.text}
         <a
           className="source"
